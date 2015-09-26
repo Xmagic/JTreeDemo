@@ -52,8 +52,13 @@ public class LabelTree extends JTree {
 
         // Show the handles used for expanding and collapsing with a single click.
         setShowsRootHandles(true);
-
-        // Create a tree node cell renderer
+        initCellRenderer();
+       
+    }
+    
+    protected void initCellRenderer()
+    {
+    	 // Create a tree node cell renderer
         setCellRenderer(new LabelTreeRenderer());
     }
     

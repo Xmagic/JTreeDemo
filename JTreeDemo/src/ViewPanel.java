@@ -22,7 +22,7 @@ public class ViewPanel extends JPanel implements TreeSelectionListener{
     
     private void onInit()
     {
-        _tree = buildBoxResourceTree();
+        _tree = buildResourceTree();
 
         _scrollPane = new JScrollPane(_tree);
         _scrollPane.setPreferredSize(new Dimension(200, _scrollPane.getPreferredSize().height));
@@ -44,10 +44,10 @@ public class ViewPanel extends JPanel implements TreeSelectionListener{
     }
 
     /**
-     * Build box resource tree
+     * Build resource tree
      */
-    protected LabelTree buildBoxResourceTree() {
-        _tree = new LabelTree();
+    protected LabelTree buildResourceTree() {
+        _tree = new DnDTree();
 
         // Only allow one entry at a time to be selected.
         _tree.getSelectionModel().setSelectionMode(TreeSelectionModel.SINGLE_TREE_SELECTION);
