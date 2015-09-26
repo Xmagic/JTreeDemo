@@ -107,6 +107,8 @@ public class DnDTree extends LabelTree implements DragSourceListener, DropTarget
 		// int index = locationToIndex (dropPoint);
 		TreePath path = getPathForLocation(dropPoint.x, dropPoint.y);
 		System.out.println("drop path is " + path);
+		if(null == path)
+			return;
 		boolean dropped = false;
 		try {
 			dtde.acceptDrop(DnDConstants.ACTION_MOVE);
